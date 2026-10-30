@@ -38,3 +38,14 @@ terraform plan
 terraform apply
 terraform destroy
 ```
+
+
+# passing variable to change the default value
+```bash
+terraform apply -var "resource_group_name=myNewResourceGroupName"
+```
+
+## get output values set in terraform
+```bash
+terraform output resource_group_id
+```
