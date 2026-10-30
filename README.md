@@ -27,3 +27,13 @@ $Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>"
 $Env:ARM_TENANT_ID = "<TENANT_VALUE>"
 ```
 
+## terraform helpfull commands
+```bash
+terraform init
+terraform fmt
+terraform validate
+terraform plan
+# creates/update the changes in main.ts
+terraform apply
+terraform destroy
+```
