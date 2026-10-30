@@ -10,22 +10,23 @@ Terraform helps manage the application deploy on infrastructure(IoC) without man
 - unzip and add its location to path
 - test in cmd for ```terraform --help```
 
-## create the Azure service principle for terraform
+
+
+## Setup local variable in powershell
+make sure to login to azure cli before running any terraform command
+```
+az login
+```
+
+
+### use terraform without login
+create the Azure service principle for terraform to
 ```
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
 ```
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret#creating-a-service-principal-using-the-azure-cli
 
 check the app registration - https://entra.microsoft.com/#home
-
-
-## Setup local variable in powershell
-```bash
-$Env:ARM_CLIENT_ID = "<APPID_VALUE>"
-$Env:ARM_CLIENT_SECRET = "<PASSWORD_VALUE>"
-$Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>"
-$Env:ARM_TENANT_ID = "<TENANT_VALUE>"
-```
 
 ## terraform helpfull commands
 ```bash
